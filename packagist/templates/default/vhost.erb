@@ -1,0 +1,31 @@
+server {
+    listen <%=@listen%>;
+    server_name <%=@server_name%>;
+    root <%=@root%>/web/;
+
+    location / {
+        index <%=@router%>;
+        if (-f $request_filename) {
+            break;
+        }
+        rewrite ^(.*)$ /<%=@router;%> last;
+    }
+
+    location /solr/ {
+        auth_basic "solr";
+        auth_basic_user_file /etc/nginx/htpasswd;
+        proxy_pass <%=@solr["host"]%>:<%=@solr["port"]%>/<%=@solr["path"]%>/;
+    }
+
+    # Pass PHP scripts to PHP-FPM
+    location ~* \.php$ {
+        try_files       $uri /<%=@router%>;
+        fastcgi_index   <%=@router%>;
+        fastcgi_pass    unix:<%=@socket%>;
+        include         fastcgi_params;
+        fastcgi_param   PATH_INFO          $fastcgi_path_info;
+        # fastcgi_param   PATH_TRANSLATED    $document_root$fastcgi_path_info;
+        fastcgi_param   SCRIPT_FILENAME    $document_root$fastcgi_script_name;
+        fastcgi_param   SCRIPT_NAME        $fastcgi_script_name;
+    }
+}

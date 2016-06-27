@@ -1,0 +1,24 @@
+{
+    "packagist": {
+        "ga": "",
+        "secret": "super-secret",
+        "remember_me": "even-moar-secret",
+        "db": {
+          "user": "packagist",
+          "pass": "secret-db-pwd"
+        }
+    },
+    "nginx": {
+        "default_site_enabled": false
+    },
+    "live": false,
+    "github": {
+        "client_id": "337c7410180b58c7cc52",
+        "secret": "xxxxxxx"
+    },
+    "smtp": {
+        "hostname": "smtp.gmail.com",
+        "username": "somebody@gmail.com",
+        "password": "foobar"
+    }
+}

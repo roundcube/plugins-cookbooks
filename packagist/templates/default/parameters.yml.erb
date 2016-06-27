@@ -1,0 +1,52 @@
+parameters:
+    database_driver: pdo_mysql
+    database_host: 127.0.0.1
+    database_name: <%=@db["db_name"]%>
+    database_user: <%=@db["user"]%>
+    database_password: <%=@db["pass"]%>
+
+    mailer_transport: smtp
+    mailer_host: <%=@smtp["hostname"]%>
+    mailer_user: <%=@smtp["username"]%>
+    mailer_password: <%=@smtp["password"]%>
+    mailer_encryption: <%=@smtp["encryption"]%>
+    mailer_auth_mode: <%=@smtp["authmode"]%>
+    mailer_from_email: <%=@email%>
+    mailer_from_name: <%=@server_name%>
+
+    packagist_host: <%=@server_name%>
+    # router.request_context.host: %packagist_host%
+    # router.request_context.scheme: https
+
+    redis_dsn: redis://127.0.0.1/1
+    redis_dsn_test: redis://127.0.0.1/14
+    redis_session_dsn: redis://localhost/2
+
+    solr_host: <%=@solr["host"]%>
+    solr_port: <%=@solr["port"]%>
+    solr_path: <%=@solr["path"]%>
+    solr_core: <%=@solr["core"]%>
+
+    locale: en
+
+    secret: <%=@secret%>
+    remember_me.secret: <%=@remember_me%>
+
+    google_analytics:
+        ga_key: <%=@ga_key%>
+
+    github.client_id: <%=@github_client%>
+    github.client_secret: <%=@github_secret%>
+
+    # -- performance features --
+    # set both to apc to optimize things if it is available
+    validation_cache_backend: ~
+    doctrine_cache_backend: array
+
+    # set to true to enforce ssl, make sure you have a proper certificate in place
+    force_ssl: false
+    # e.g. [127.0.0.1] if the app is running behind a reverse proxy on localhost
+    trusted_proxies: ~
+    # e.g. ['.*\.?packagist\.org$'] to allow packagist.org and all subdomains as valid hosts
+    trusted_hosts: ~
+

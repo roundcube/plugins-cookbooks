@@ -1,0 +1,42 @@
+{
+  "name": "packagist",
+  "description": "Installs Packagist platform",
+  "long_description": "",
+  "maintainer": "",
+  "maintainer_email": "",
+  "license": "MIT",
+  "platforms": {
+    "centos": ">= 0.0.0",
+    "debian": ">= 0.0.0",
+    "ubuntu": ">= 0.0.0"
+  },
+  "dependencies": {
+  },
+  "recommendations": {
+
+  },
+  "suggestions": {
+
+  },
+  "conflicting": {
+
+  },
+  "providing": {
+
+  },
+  "replacing": {
+
+  },
+  "attributes": {
+
+  },
+  "groupings": {
+
+  },
+  "recipes": {
+
+  },
+  "version": "0.2.0",
+  "source_url": "",
+  "issues_url": ""
+}
