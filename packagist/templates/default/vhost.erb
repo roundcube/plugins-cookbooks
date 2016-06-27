@@ -14,7 +14,7 @@ server {
     location /solr/ {
         auth_basic "solr";
         auth_basic_user_file /etc/nginx/htpasswd;
-        proxy_pass <%=@solr["host"]%>:<%=@solr["port"]%>/<%=@solr["path"]%>/;
+        proxy_pass http://<%=@solr["host"]%>:<%=@solr["port"]%><%=@solr["path"]%>/;
     }
 
     # Pass PHP scripts to PHP-FPM
