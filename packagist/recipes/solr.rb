@@ -6,7 +6,7 @@ conf  = "#{data}/conf"
 
 directory conf do
   action    :create
-  mode      "0644"
+  mode      "0777"
   owner     "root"
   group     "tomcat7"
   recursive true
