@@ -21,9 +21,10 @@ if node.attribute?("live") && node["live"] == true
   include_recipe "packagist::deploy"
 else
   include_recipe "packagist::configure"
-  include_recipe "packagist::composer"
+  include_recipe "packagist::install"
   include_recipe "packagist::db"
 end
 
 include_recipe "packagist::solr"
 include_recipe "packagist::cron"
+include_recipe "packagist::composer"

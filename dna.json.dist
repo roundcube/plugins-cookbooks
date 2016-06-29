@@ -14,7 +14,8 @@
     "live": false,
     "github": {
         "client_id": "337c7410180b58c7cc52",
-        "secret": "xxxxxxx"
+        "secret": "xxxxxxx",
+        "oauth_token": ""
     },
     "smtp": {
         "hostname": "smtp.gmail.com",

@@ -67,7 +67,7 @@ deploy node["packagist"]["root"] do
 
   restart do
     execute "php-fpm cycle" do
-      command "/etc/init.d/php5-fpm reload"
+      command "/etc/init.d/php7.0-fpm reload"
     end
   end
 end
