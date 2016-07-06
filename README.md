@@ -15,8 +15,12 @@ The server should run Ubuntu Trusty. Before starting, please ensure the latest u
  * `apt-get upgrade`
  * `apt-get dist-upgrade`
  * `apt-get install ruby make git`
+ 
+Then install all requirements for the cookbooks to run:
 
-## Installation
+`./apt-setup.sh`
+
+## Cookbook Installation
 
  * set `live: true` in dna.json
  * `chef-solo -c /home/you/cookbooks/chef-solo/solo.rb`

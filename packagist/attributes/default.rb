@@ -29,4 +29,4 @@ default["packagist"]["solr"]["core"]  = "core1"
 
 # deploying live
 default["packagist"]["live_root"]  = "/var/www"
-default["packagist"]["repository"] = "git://github.com/thomascube/packagist.git"
+default["packagist"]["repository"] = "git://github.com/roundcube/plugins.roundcube.net.git"

@@ -1,15 +1,13 @@
 {
     "packagist": {
         "ga": "",
+        "server_name": "plugins2.roundcube.net",
         "secret": "super-secret",
         "remember_me": "even-moar-secret",
         "db": {
           "user": "packagist",
           "pass": "secret-db-pwd"
         }
-    },
-    "nginx": {
-        "default_site_enabled": false
     },
     "live": false,
     "github": {
