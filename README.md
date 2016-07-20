@@ -23,4 +23,4 @@ Then install all requirements for the cookbooks to run:
 ## Cookbook Installation
 
  * set `live: true` in dna.json
- * `chef-solo -c /home/you/cookbooks/chef-solo/solo.rb`
+ * `chef-solo -c /home/you/cookbooks/chef-solo/solo.rb -o 'recipe[apt],recipe[tomcat-solr],recipe[packagist]'`
