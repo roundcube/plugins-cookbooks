@@ -1,4 +1,4 @@
-node["packagist"]["root"] = "#{node["packagist"]["live_root"]}/#{node["packagist"]["server_name"]}"
+node.override["packagist"]["root"] = "#{node["packagist"]["live_root"]}/#{node["packagist"]["server_name"]}"
 
 Chef::Log.info("Setting root to #{node["packagist"]["root"]}")
 
